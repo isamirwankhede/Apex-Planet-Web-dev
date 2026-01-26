@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: #00d4ff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00d4ff;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.hero-content {
+    padding-top: 50px;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #00d4ff;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  padding: 18px 45px;
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.6);
+}
+
+.cta-button:active {
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  border-radius: 20px;
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-image img {
+  width: 500px;
+  filter: drop-shadow(0 20px 40px rgba(0, 212, 255, 0.3));
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Features Section */
+.features {
+  padding: 100px 50px;
+  background: #f8f9fa;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.features h2 span {
+  color: #00d4ff;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Product Showcase */
+.showcase {
+  padding: 100px 50px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-align: center;
+}
+
+.showcase h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.showcase p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+}
+
+.price {
+  font-size: 64px;
+  font-weight: bold;
+  color: #00d4ff;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer a {
+  color: #00d4ff;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 100px 30px 50px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-image img {
+    width: 300px;
+    margin-top: 40px;
+  }
+
+  nav {
+    padding: 20px 30px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+}
