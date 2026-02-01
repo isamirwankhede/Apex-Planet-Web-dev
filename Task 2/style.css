@@ -1,0 +1,417 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #e0e0e0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  color: #ffffff;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+  background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  color: #b0b0b0;
+}
+
+/* CSS Grid Layout for Content Areas */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* Card Styles */
+.card {
+  background: rgba(30, 30, 50, 0.8);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.3);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.card h2 {
+  color: #00d4ff;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #00d4ff;
+  padding-bottom: 10px;
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #c0c0c0;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  font-family: inherit;
+  background: rgba(20, 20, 40, 0.6);
+  color: #e0e0e0;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+  background: rgba(20, 20, 40, 0.8);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ff4757;
+  animation: shake 0.3s ease;
+}
+
+.form-group input.success,
+.form-group textarea.success {
+  border-color: #2ed573;
+}
+
+/* Animations */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Error and Success Messages */
+.error-message {
+  color: #ff4757;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.error-message.show {
+  display: block;
+}
+
+.success-message {
+  background: rgba(46, 213, 115, 0.2);
+  color: #2ed573;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(46, 213, 115, 0.4);
+  display: none;
+  animation: slideDown 0.3s ease;
+}
+
+.success-message.show {
+  display: block;
+}
+
+/* Button Styles */
+.btn {
+  background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.5);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* To-Do List Styling */
+.todo-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-input-group input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(20, 20, 40, 0.6);
+  color: #e0e0e0;
+}
+
+.todo-input-group input::placeholder {
+  color: #666;
+}
+
+.todo-input-group input:focus {
+  outline: none;
+  border-color: #00d4ff;
+  background: rgba(20, 20, 40, 0.8);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+}
+
+.todo-input-group button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.todo-input-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  background: rgba(40, 40, 70, 0.6);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  animation: slideIn 0.3s ease;
+}
+
+.todo-item:hover {
+  background: rgba(50, 50, 80, 0.8);
+  transform: translateX(5px);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo-text {
+  flex: 1;
+  color: #e0e0e0;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.todo-btn:hover {
+  transform: scale(1.05);
+}
+
+.complete-btn {
+  background: #2ed573;
+  color: white;
+}
+
+.complete-btn:hover {
+  background: #26d165;
+  box-shadow: 0 3px 10px rgba(46, 213, 115, 0.3);
+}
+
+.delete-btn {
+  background: #ff4757;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #ff3838;
+  box-shadow: 0 3px 10px rgba(255, 71, 87, 0.3);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.empty-state span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+
+/* Responsive Design - Media Queries */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .todo-input-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card h2 {
+    font-size: 1.4rem;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  .todo-actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .todo-btn {
+    width: 100%;
+  }
+}
