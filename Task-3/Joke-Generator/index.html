@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😂 Random Joke Generator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>😂 Random Joke Generator</h1>
+            <p>Get ready to laugh with jokes from around the internet!</p>
+        </div>
+
+        <div class="controls">
+            <select id="categorySelect">
+                <option value="Any">Any Category</option>
+                <option value="Programming">Programming</option>
+                <option value="Misc">Miscellaneous</option>
+                <option value="Dark">Dark</option>
+                <option value="Pun">Pun</option>
+                <option value="Spooky">Spooky</option>
+                <option value="Christmas">Christmas</option>
+            </select>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        </div>
+
+        <div id="errorMessage"></div>
+
+        <div class="joke-card">
+            <div id="jokeContent" class="joke-content">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading a hilarious joke for you...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="btn-primary" id="newJokeBtn">
+                🎲 New Joke
+            </button>
+            <button class="btn-secondary" id="favoriteBtn">
+                ⭐ Save Favorite
+            </button>
+        </div>
+
+        <div class="favorites" id="favoritesSection" style="margin-top: 30px; display: none;">
+            <h3>Favorite Jokes <span class="favorite-count" id="favoriteCount">0</span></h3>
+            <div id="favoritesList"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
