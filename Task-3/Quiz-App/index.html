@@ -1,1 +1,54 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎯 Simple Quiz App</h1>
+
+        <!-- Start Screen -->
+        <div class="start-container active" id="startContainer">
+            <p>Test your knowledge with this fun quiz! Answer 5 questions and see how well you do.</p>
+            <button class="btn-start" onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="quiz-container" id="quizContainer">
+            <div class="score-info">
+                Question <span id="currentQuestion">1</span> of <span id="totalQuestions">5</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+
+            <div class="question" id="question"></div>
+
+            <ul class="options" id="options"></ul>
+
+            <div class="buttons">
+                <button class="btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="result-container" id="resultContainer">
+            <div class="emoji" id="resultEmoji"></div>
+            <div class="result-message" id="resultMessage"></div>
+            <div class="score">
+                <span id="finalScore">0</span> / <span id="totalScore">5</span>
+            </div>
+            <button class="btn-start" onclick="restartQuiz()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
