@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Store - Filter & Sort</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Product Store</h1>
+            <p class="subtitle">Discover amazing products at great prices</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search products...">
+            </div>
+            <button class="filter-toggle" id="filterToggle">
+                <span>⚙️</span>
+                Filters
+                <span class="filter-badge" id="filterBadge" style="display: none;">0</span>
+            </button>
+        </div>
+
+        <div class="main-content">
+            <aside class="sidebar" id="sidebar">
+                <div class="filter-header">
+                    <h2>Filters</h2>
+                    <button class="clear-filters" id="clearFilters">Clear all</button>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Category</h3>
+                    <div class="filter-option">
+                        <input type="radio" name="category" value="All" id="catAll" checked>
+                        <label for="catAll">All</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" name="category" value="Electronics" id="catElec">
+                        <label for="catElec">Electronics</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" name="category" value="Accessories" id="catAcc">
+                        <label for="catAcc">Accessories</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" name="category" value="Home & Kitchen" id="catHome">
+                        <label for="catHome">Home & Kitchen</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" name="category" value="Sports" id="catSports">
+                        <label for="catSports">Sports</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <div class="price-values">
+                            <span>₹<span id="minPriceValue">0</span></span>
+                            <span>₹<span id="maxPriceValue">10000</span></span>
+                        </div>
+                        <div class="price-sliders">
+                            <input type="range" id="minPrice" min="0" max="10000" value="0" step="100">
+                            <input type="range" id="maxPrice" min="0" max="10000" value="10000" step="100">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Minimum Rating</h3>
+                    <div class="filter-option">
+                        <input type="radio" name="rating" value="0" id="rating0" checked>
+                        <label for="rating0">All ratings</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" name="rating" value="4" id="rating4">
+                        <label for="rating4">⭐ 4+ stars</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" name="rating" value="3" id="rating3">
+                        <label for="rating3">⭐ 3+ stars</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" name="rating" value="2" id="rating2">
+                        <label for="rating2">⭐ 2+ stars</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="radio" name="rating" value="1" id="rating1">
+                        <label for="rating1">⭐ 1+ stars</label>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="products-section">
+                <div class="products-header">
+                    <div class="results-count" id="resultsCount">12 products found</div>
+                    <div class="sort-container">
+                        <label for="sortSelect">Sort by:</label>
+                        <select id="sortSelect">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="name">Name: A-Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
