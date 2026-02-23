@@ -1,4 +1,4 @@
-# 📝 INKWELL — Dark Theme Blog Website
+# 📝 INKWELL —  Blog Website
 
 > A professional, responsive blog website built with pure **HTML, CSS & JavaScript** as part of a Web Development Final Project (Task 5 — Final Project and Optimization).
 
@@ -38,7 +38,6 @@ inkwell-blog/
 ### ⚡ JavaScript Features
 | Feature | Description |
 |---|---|
-| 🔍 Live Search | Filters posts in real-time as you type |
 | 🏷️ Category Filter | Filter posts by JavaScript, CSS, Design, etc. |
 | 📱 Mobile Menu | Hamburger menu with animated open/close icon |
 | 📧 Form Validation | Email format check + name required validation |
