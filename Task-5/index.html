@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INKWELL — Modern Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">INK<span>WELL</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="#categories">Topics</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="search-btn" id="searchBtn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <input type="text" placeholder="Search articles..." id="searchInput" />
+      <button class="close-search" id="closeSearch">✕</button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">BLOG</div>
+    <div class="hero-content">
+      <span class="hero-tag animate-fade-up">✦ Web Development & Tech</span>
+      <h1 class="hero-title animate-fade-up delay-1">
+        Ideas Worth<br /><em>Reading.</em>
+      </h1>
+      <p class="hero-subtitle animate-fade-up delay-2">
+        Deep dives into technology, design, and the craft of building things for the web.
+      </p>
+      <div class="hero-cta animate-fade-up delay-3">
+        <a href="#featured" class="btn-primary">Explore Articles</a>
+        <a href="#newsletter" class="btn-ghost">Subscribe Free →</a>
+      </div>
+    </div>
+    <div class="hero-stats animate-fade-up delay-3">
+      <div class="stat"><span>120+</span><p>Articles</p></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span>14K</span><p>Readers</p></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span>8</span><p>Topics</p></div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED POST ===== -->
+  <section class="featured-section" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">★ Featured</p>
+        <h2>Editor's Pick</h2>
+      </div>
+      <div class="featured-card">
+        <div class="featured-image">
+          <div class="featured-img-placeholder">
+            <span class="img-icon">📱</span>
+            <div class="featured-badge">Featured</div>
+          </div>
+        </div>
+        <div class="featured-content">
+          <div class="post-meta">
+            <span class="category-tag cat-tech">Technology</span>
+            <span class="read-time">10 min read</span>
+          </div>
+          <h2 class="featured-title">
+            How AI is Changing the Way We Code in 2025
+          </h2>
+          <p class="featured-excerpt">
+            From GitHub Copilot to Claude Code, AI tools are reshaping the developer workflow. Developers are already writing code 3–4× faster — but it requires knowing how to use these tools effectively. Here's what changed, and what it means for you.
+          </p>
+          <div class="author-row">
+            <div class="author-avatar">FC</div>
+            <div class="author-info">
+              <strong>freeCodeCamp</strong>
+              <span>August 14, 2025</span>
+            </div>
+            <a href="https://www.freecodecamp.org/news/how-ai-is-changing-the-way-we-code" target="_blank" rel="noopener noreferrer" class="read-more-btn">Read Article →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG POSTS GRID ===== -->
+  <section class="posts-section" id="posts">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">★ Latest</p>
+        <h2>Recent Articles</h2>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="technology">Technology</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="javascript">JavaScript</button>
+        <button class="filter-btn" data-filter="css">CSS</button>
+        <button class="filter-btn" data-filter="career">Career</button>
+      </div>
+
+      <!-- Posts Grid -->
+      <div class="posts-grid" id="postsGrid">
+
+        <article class="post-card" data-category="javascript">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#1a1a2e,#16213e)">
+              <span>⚡</span>
+            </div>
+            <span class="category-tag cat-js">JavaScript</span>
+          </div>
+          <div class="card-body">
+            <p class="post-date">August 15, 2023 · 15 min read</p>
+            <h3>How to Use JavaScript Promises – Callbacks, Async/Await Explained</h3>
+            <p>Stop getting confused by asynchronous code. This complete guide breaks down Promises, callbacks, and async/await with real examples.</p>
+          </div>
+          <div class="card-footer">
+            <div class="author-mini">
+              <div class="author-avatar sm">FC</div>
+              <span>freeCodeCamp</span>
+            </div>
+            <a href="https://www.freecodecamp.org/news/javascript-promises-async-await-and-promise-methods/" target="_blank" rel="noopener noreferrer" class="link-arrow">Read →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="css">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#0d1b2a,#1b4332)">
+              <span>🎨</span>
+            </div>
+            <span class="category-tag cat-css">CSS</span>
+          </div>
+          <div class="card-body">
+            <p class="post-date">February 14, 2019 · 5 min read</p>
+            <h3>Quick! What's the Difference Between Flexbox and Grid?</h3>
+            <p>A practical breakdown of the two most powerful CSS layout tools — Flexbox for 1D, Grid for 2D — with clear visual examples from CSS-Tricks.</p>
+          </div>
+          <div class="card-footer">
+            <div class="author-mini">
+              <div class="author-avatar sm">CT</div>
+              <span>CSS-Tricks</span>
+            </div>
+            <a href="https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/" target="_blank" rel="noopener noreferrer" class="link-arrow">Read →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="design">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#1a0a2e,#3d0066)">
+              <span>✦</span>
+            </div>
+            <span class="category-tag cat-design">Design</span>
+          </div>
+          <div class="card-body">
+            <p class="post-date">January 13, 2026 · 12 min read</p>
+            <h3>What is a Component Library? When to Build Your Own</h3>
+            <p>Learn how component libraries and design systems work, when to build your own vs use an existing one, and how to scale for consistency.</p>
+          </div>
+          <div class="card-footer">
+            <div class="author-mini">
+              <div class="author-avatar sm">FC</div>
+              <span>freeCodeCamp</span>
+            </div>
+            <a href="https://www.freecodecamp.org/news/what-is-a-component-library-when-to-build-your-own" target="_blank" rel="noopener noreferrer" class="link-arrow">Read →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="technology">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#0a1628,#0d3b6e)">
+              <span>🤖</span>
+            </div>
+            <span class="category-tag cat-tech">Technology</span>
+          </div>
+          <div class="card-body">
+            <p class="post-date">January 8, 2026 · 14 min read</p>
+            <h3>How to Not Be Overwhelmed by AI – A Developer's Guide</h3>
+            <p>From GitHub Copilot to Claude Code, here's a practical guide on using AI tools effectively without letting them erode your core programming skills.</p>
+          </div>
+          <div class="card-footer">
+            <div class="author-mini">
+              <div class="author-avatar sm">FC</div>
+              <span>freeCodeCamp</span>
+            </div>
+            <a href="https://www.freecodecamp.org/news/how-to-not-be-overwhelmed-by-ai/" target="_blank" rel="noopener noreferrer" class="link-arrow">Read →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="career">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#1a1200,#3d2e00)">
+              <span>🚀</span>
+            </div>
+            <span class="category-tag cat-career">Career</span>
+          </div>
+          <div class="card-body">
+            <p class="post-date">May 7, 2020 · 8 min read</p>
+            <h3>What Does It Mean to Be a Senior Developer — and How to Get There</h3>
+            <p>It's not just years of experience. These are the real skills and mindset shifts that separate junior from senior developers in the real world.</p>
+          </div>
+          <div class="card-footer">
+            <div class="author-mini">
+              <div class="author-avatar sm">FC</div>
+              <span>freeCodeCamp</span>
+            </div>
+            <a href="https://www.freecodecamp.org/news/what-does-it-mean-to-be-a-senior-developer-and-how-can-we-become-one/" target="_blank" rel="noopener noreferrer" class="link-arrow">Read →</a>
+          </div>
+        </article>
+
+        <article class="post-card" data-category="javascript">
+          <div class="card-img-wrap">
+            <div class="card-img-placeholder" style="background: linear-gradient(135deg,#1a2a1a,#003300)">
+              <span>🌐</span>
+            </div>
+            <span class="category-tag cat-js">JavaScript</span>
+          </div>
+          <div class="card-body">
+            <p class="post-date">February 21, 2022 · 10 min read</p>
+            <h3>How to Build a RESTful API Using Node, Express, and MongoDB</h3>
+            <p>A beginner-friendly step-by-step guide to building your first backend REST API with full CRUD operations using Node.js, Express, and MongoDB.</p>
+          </div>
+          <div class="card-footer">
+            <div class="author-mini">
+              <div class="author-avatar sm">FC</div>
+              <span>freeCodeCamp</span>
+            </div>
+            <a href="https://www.freecodecamp.org/news/build-a-restful-api-using-node-express-and-mongodb/" target="_blank" rel="noopener noreferrer" class="link-arrow">Read →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="load-more-wrap">
+        <button class="btn-outline" id="loadMoreBtn">Load More Articles</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">★ Browse</p>
+        <h2>Explore Topics</h2>
+      </div>
+      <div class="categories-grid">
+        <div class="cat-card">
+          <div class="cat-icon">⚡</div>
+          <h3>JavaScript</h3>
+          <p>24 articles</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">🎨</div>
+          <h3>CSS & Design</h3>
+          <p>18 articles</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">🤖</div>
+          <h3>Technology</h3>
+          <p>31 articles</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">🖥️</div>
+          <h3>Backend</h3>
+          <p>15 articles</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">🚀</div>
+          <h3>Career</h3>
+          <p>12 articles</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">📱</div>
+          <h3>Mobile Dev</h3>
+          <p>9 articles</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">🔒</div>
+          <h3>Security</h3>
+          <p>11 articles</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">☁️</div>
+          <h3>Cloud & DevOps</h3>
+          <p>17 articles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-left">
+          <p class="section-label" style="color:var(--accent)">★ Stay Updated</p>
+          <h2>Never Miss an Article.</h2>
+          <p>Join 14,000+ developers getting weekly insights on web dev, design, and tech delivered straight to their inbox.</p>
+          <ul class="nl-benefits">
+            <li>✓ Weekly curated articles</li>
+            <li>✓ Exclusive tutorials</li>
+            <li>✓ No spam, ever</li>
+          </ul>
+        </div>
+        <div class="newsletter-right">
+          <form class="nl-form" id="nlForm">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" placeholder="John Doe" id="nlName" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com" id="nlEmail" required />
+            </div>
+            <button type="submit" class="btn-primary full-width">Subscribe Now →</button>
+            <p class="form-note">Free forever. Unsubscribe anytime.</p>
+          </form>
+          <div class="nl-success" id="nlSuccess">
+            <div class="success-icon">✓</div>
+            <h3>You're in!</h3>
+            <p>Check your inbox for a welcome email.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo">INK<span>WELL</span></a>
+          <p>A blog for developers, designers, and curious minds building the modern web.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="GitHub">⌥</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="RSS">◎</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Content</h4>
+            <ul>
+              <li><a href="#">Latest Posts</a></li>
+              <li><a href="#">Featured</a></li>
+              <li><a href="#">Tutorials</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Topics</h4>
+            <ul>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">CSS & Design</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Technology</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Write for Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 INKWELL. Built with HTML, CSS & JavaScript.</p>
+        <p>Made for learning & growth ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
